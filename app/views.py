@@ -5,9 +5,9 @@ from app import app, db
 from models import User
 
 # Facebook app details
-FB_APP_ID = ''
-FB_APP_NAME = ''
-FB_APP_SECRET = ''
+FB_APP_ID = '552071944982395'
+FB_APP_NAME = 'holo'
+FB_APP_SECRET = '42e9aa6c54fd80e3ac03e928b02f6771'
 
 
 @app.route('/')
@@ -19,7 +19,6 @@ def index():
                                app_name=FB_APP_NAME, user=g.user)
     # Otherwise, a user is not logged in.
     return render_template('login.html', app_id=FB_APP_ID, name=FB_APP_NAME)
-
 
 @app.route('/logout')
 def logout():
